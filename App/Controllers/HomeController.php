@@ -28,4 +28,25 @@ class HomeController extends AControllerBase
             []
         );
     }
+
+    public function team()
+    {
+        return $this->html(
+            []
+        );
+    }
+
+    public function pricing()
+    {
+        return $this->html(
+            []
+        );
+    }
+
+    public function login()
+    {
+        return $this->html(
+            []
+        );
+    }
 }
