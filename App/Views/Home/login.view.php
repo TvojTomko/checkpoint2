@@ -5,9 +5,9 @@
     <h2 class="centertext">LOGIN</h2>
     <h5 class="centertext">Send us a message</h5>
     <div style="margin-top:48px">
-        <form action="URL" target="_blank">
+        <form method="post" action="c?=auth&a=login">
             <p><input class="w3-input w3-border" type="text" placeholder="Login" required name="Login"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Password" required name="Password"></p>
+            <p><input class="w3-input w3-border" type="password" placeholder="Password" required name="Password"></p>
             <p>
                 <button class="w3-button w3-black" type="submit">
                     <i class="fa fa-paper-plane"></i> Sign in
