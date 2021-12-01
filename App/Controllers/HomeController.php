@@ -49,4 +49,11 @@ class HomeController extends AControllerBase
             []
         );
     }
+
+    public function register()
+    {
+        return $this->html(
+            []
+        );
+    }
 }

@@ -69,6 +69,10 @@ body, html {
     font-size: 19px;
     font-family: sans-serif;
 }
+.text {
+    font-family: monospace;
+    text-decoration: none;
+}
 
 .pic {
     height: auto;
@@ -100,4 +104,22 @@ body, html {
 .credits {
     font-size: 10px;
     color: #d70000;
+}
+
+.decnone {
+    text-decoration: none;
+}
+
+.specialtext {
+    padding-top: 10px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.bottom {
+    float: bottom;
+}
+
+.regdiv {
+    margin-bottom: 20px;
 }
