@@ -50,7 +50,10 @@ class App
         // call appropriate method of the controller class
         $response =  call_user_func([$this->router->getController(), $this->router->getAction()]);
 
-        $response->generate();
+        //toto som dorobil ja mozno je to zle
+        if($response != null) {
+            $response->generate();
+        }
 
         // if SQL debugging in configuration is allowed, display all SQL queries
         if (Configuration::DEBUG_QUERY) {

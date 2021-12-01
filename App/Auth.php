@@ -2,24 +2,20 @@
 
 namespace App;
 
+use App\Models\User;
+
 class Auth
 {
-    const LOGIN = "kappa";
-    const PASSWORD = "kappa";
 
     public static function login($login, $password)
     {
-        if ($login == self::LOGIN && $password == self::PASSWORD ) {
+        $user = User::getAll('username = ? and password = ?', [$login, $password]);
+        if ($user) {
             $_SESSION["name"] = $login;
             return true;
         } else {
             return false;
         }
-    }
-
-    public static function register($email, $login, $password)
-    {
-
     }
 
     public static function logout()

@@ -49,15 +49,52 @@ class AuthController extends AControllerRedirect
 
     public function register()
     {
-        $postId = $this->request()->getValue('postid');
+        $newUser = new User();
+        $newUser->setEmail($this->request()->getValue('email'));
+        $newUser->setUsername($this->request()->getValue('username'));
+        $newUser->setPassword($this->request()->getValue('password'));
+        $newUser->save();
 
-        if ($postId) {
-            $newUser = new User();
-            $newUser->setEmail($this->request()->getValue('email'));
-            $newUser->setUsername($this->request()->getValue('username'));
-            $newUser->setPassword($this->request()->getValue('password'));
-            $newUser->save();
-        }
+        $this->redirect('home');
+    }
+
+    public function changepasswordpage()
+    {
+        return $this->html(
+            []
+        );
+    }
+
+    public function changepassword() {
+
+        $name = $_SESSION["name"];
+
+        $user = User::getAll('username = ?', [$name]);
+        $usernew = $user[0];
+        $zobratahodnota = $this->request()->getValue('newpassword');
+        $usernew->setPassword($zobratahodnota);
+        $usernew->save();
+
+        $this->redirect('home');
+    }
+
+    public function deleteuserpage()
+    {
+        return $this->html(
+            []
+        );
+    }
+
+    public function deleteuser()
+    {
+        $name = $_SESSION["name"];
+
+        $user = User::getAll('username = ?', [$name]);
+        $usernew = $user[0];
+        $usernew->delete();
+
+        unset($_SESSION['name']);
+        session_destroy();
 
         $this->redirect('home');
     }
