@@ -43,12 +43,6 @@ class HomeController extends AControllerBase
         );
     }
 
-    public function login()
-    {
-        return $this->html(
-            []
-        );
-    }
 
     public function register()
     {

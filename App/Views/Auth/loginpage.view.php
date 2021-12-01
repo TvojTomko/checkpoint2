@@ -19,7 +19,7 @@
 </div>
 <!-- TO DO: predizajnovat register div ? -->
 <div  class="w3-container w3-light-grey regdiv" id="register">
-        <a href="?c=home&a=register" class="w3-button w3-black right text bottom regbut" type="button">
+        <a href="?c=auth&a=register" class="w3-button w3-black right text bottom regbut" type="button">
             <p class="fa fa-paper-plane"></p>
             Register
         </a>

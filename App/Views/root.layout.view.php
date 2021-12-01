@@ -21,7 +21,7 @@
             <a href="?c=home&a=team" class="w3-bar-item mynav"><i class="fa fa-user"></i>TEAM</a>
             <a href="?c=home&a=pricing" class="w3-bar-item mynav"><i class="fa fa-usd"></i>PRICING</a>
             <a href="?c=home&a=contact" class="w3-bar-item mynav"><i class="fa fa-envelope"></i>CONTACT</a>
-            <a href="?c=home&a=login" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
+            <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a href="javascript:void(0)" class="w3-bar-item w3-button right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -37,7 +37,7 @@
     <a href="?c=home&a=team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
     <a href="?c=home&a=pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
     <a href="?c=home&a=contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    <a href="" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+    <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
 </nav>
 
 <!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">-->

@@ -4,7 +4,8 @@ namespace App\Models;
 
 class Post extends \App\Core\Model
 {
-    public function __construct(public int $id=0, public ?string $username=null, public ?string $password=null)
+    public function __construct(public int $id=0, public ?string $email= null,
+                                public ?string $username=null, public ?string $password=null)
     {
     }
 
@@ -58,7 +59,7 @@ class Post extends \App\Core\Model
 
     static public function setDbColumns()
     {
-        return ['id', 'username', 'password'];
+        return ['id','email', 'username', 'password'];
     }
 
     static public function setTableName()
