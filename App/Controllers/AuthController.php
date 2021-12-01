@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Auth;
 use App\Core\Responses\JsonResponse;
 use App\Core\Responses\Response;
+use App\Models\User;
 
 class AuthController extends AControllerRedirect
 {
@@ -14,15 +15,21 @@ class AuthController extends AControllerRedirect
      */
     public function index()
     {
-        // TODO: Implement index() method.
     }
 
     public function loginpage()
     {
         return $this->html(
             [
-                //'error' => $this->request()->getValue('error')
+                'error' => $this->request()->getValue('error')
             ]
+        );
+    }
+
+    public function registerpage()
+    {
+        return $this->html(
+            []
         );
     }
 
@@ -36,7 +43,28 @@ class AuthController extends AControllerRedirect
         if ($logged) {
             $this->redirect('home');
         } else {
-            $this->redirect('auth', 'login.view', ['error'=> 'Wrong login name or password']);
+            $this->redirect('auth', 'loginpage', ['error'=> 'Wrong login name or password']);
         }
+    }
+
+    public function register()
+    {
+        $postId = $this->request()->getValue('postid');
+
+        if ($postId) {
+            $newUser = new User();
+            $newUser->setEmail($this->request()->getValue('email'));
+            $newUser->setUsername($this->request()->getValue('username'));
+            $newUser->setPassword($this->request()->getValue('password'));
+            $newUser->save();
+        }
+
+        $this->redirect('home');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        $this->redirect('home');
     }
 }

@@ -13,21 +13,25 @@
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="" class="w3-bar-item w3-button w3-wide left">LOGO will be here</a>
+    <nav class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="?c=home" class="w3-bar-item w3-button w3-wide left">LOGO will be here</a>
         <!-- Right-sided navbar links -->
         <div class="right w3-hide-small">
             <a href="?c=home" class="w3-bar-item mynav"><i class="fa fa-home"></i>HOME</a>
             <a href="?c=home&a=team" class="w3-bar-item mynav"><i class="fa fa-user"></i>TEAM</a>
             <a href="?c=home&a=pricing" class="w3-bar-item mynav"><i class="fa fa-usd"></i>PRICING</a>
             <a href="?c=home&a=contact" class="w3-bar-item mynav"><i class="fa fa-envelope"></i>CONTACT</a>
-            <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
+            <?php if(!\App\Auth::isLogged()) { ?>
+                <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
+            <?php } else {?>
+            <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGOUT</a>
+            <?php } ?>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a href="javascript:void(0)" class="w3-bar-item w3-button right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
         </a>
-    </div>
+    </nav>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->

@@ -15,10 +15,10 @@ class HomeController extends AControllerBase
 
     public function index()
     {
-        $regusers = Post::getAll();
+        //$regusers = Post::getAll();
         return $this->html(
             [
-                'registeredusers' => $regusers
+                //'registeredusers' => $regusers
             ]);
     }
 

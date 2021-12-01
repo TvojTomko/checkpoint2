@@ -5,23 +5,36 @@ namespace App;
 class Auth
 {
     const LOGIN = "kappa";
-    const PASSWORD = "kappa123";
+    const PASSWORD = "kappa";
 
     public static function login($login, $password)
     {
-        if ($login == self::LOGIN   && $password == self::PASSWORD ) {
+        if ($login == self::LOGIN && $password == self::PASSWORD ) {
+            $_SESSION["name"] = $login;
             return true;
-        } else
+        } else {
             return false;
+        }
     }
 
-    public static function ifLogged()
+    public static function register($email, $login, $password)
     {
-        return isset($_SESSION['login']);
+
+    }
+
+    public static function logout()
+    {
+        unset($_SESSION['name']);
+        session_destroy();
+    }
+
+    public static function isLogged()
+    {
+        return isset($_SESSION['name']);
     }
 
     public static function getName()
     {
-        return (Auth::ifLogged() ? $_SESSION['login'] : "");
+        return (Auth::isLogged() ? $_SESSION['name'] : "");
     }
 }

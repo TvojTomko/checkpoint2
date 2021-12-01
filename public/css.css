@@ -134,3 +134,8 @@ body, html {
 .regbut {
     padding: 1px 10px;
 }
+
+.errortext {
+    color: #d70000;
+    font-size: 20px;
+}
