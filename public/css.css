@@ -123,3 +123,14 @@ body, html {
 .regdiv {
     margin-bottom: 20px;
 }
+
+.input {
+    width: 800px;
+}
+.logincont {
+    width: 600px;
+}
+
+.regbut {
+    padding: 1px 10px;
+}
