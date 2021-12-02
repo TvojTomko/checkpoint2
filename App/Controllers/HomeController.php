@@ -15,10 +15,9 @@ class HomeController extends AControllerBase
 
     public function index()
     {
-        //$regusers = Post::getAll();
         return $this->html(
             [
-                //'registeredusers' => $regusers
+                'success' => $this->request()->getValue('success')
             ]);
     }
 

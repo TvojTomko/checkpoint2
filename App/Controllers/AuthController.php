@@ -26,13 +26,6 @@ class AuthController extends AControllerRedirect
         );
     }
 
-    public function registerpage()
-    {
-        return $this->html(
-            []
-        );
-    }
-
     public function login()
     {
         $login = $this->request()->getValue('login');
@@ -47,15 +40,38 @@ class AuthController extends AControllerRedirect
         }
     }
 
+    public function registerpage()
+    {
+        return $this->html(
+            [
+                'error' => $this->request()->getValue('error')
+            ]
+        );
+    }
+
     public function register()
     {
         $newUser = new User();
-        $newUser->setEmail($this->request()->getValue('email'));
-        $newUser->setUsername($this->request()->getValue('username'));
-        $newUser->setPassword($this->request()->getValue('password'));
-        $newUser->save();
 
-        $this->redirect('home');
+        $email=$this->request()->getValue('email');
+        $username= $this->request()->getValue('username');
+
+        if (!User::getAll('email = ?', [$email])) {
+            if (!User::getAll('username = ?', [$username])) {
+
+                $newUser->setEmail($this->request()->getValue('email'));
+                $newUser->setUsername($this->request()->getValue('username'));
+                $newUser->setPassword($this->request()->getValue('password'));
+
+                $newUser->save();
+                $this->redirect('home', 'index', ['success' => 'User was created']);
+
+            } else {
+                $this->redirect('auth', 'registerpage', ['error'=> 'Username is used by another member']);
+            }
+        } else {
+            $this->redirect('auth', 'registerpage', ['error'=> 'Email is used by another member']);
+        }
     }
 
     public function changepasswordpage()
