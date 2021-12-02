@@ -91,7 +91,7 @@ class AuthController extends AControllerRedirect
         $usernew->setPassword($zobratahodnota);
         $usernew->save();
 
-        $this->redirect('home');
+        $this->redirect('home', 'index', ['success' => 'Your password was changed']);
     }
 
     public function deleteuserpage()
@@ -112,12 +112,12 @@ class AuthController extends AControllerRedirect
         unset($_SESSION['name']);
         session_destroy();
 
-        $this->redirect('home');
+        $this->redirect('home', 'index', ['success' => 'User was deleted']);
     }
 
     public function logout()
     {
         Auth::logout();
-        $this->redirect('home');
+        $this->redirect('home', 'index', ['success' => 'Successful logout']);
     }
 }
