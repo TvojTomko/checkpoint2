@@ -4,7 +4,6 @@
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="login">
     <h2 class="centertext">LOG IN</h2>
     <div style="margin-top:48px">
-        <!-- -->
 
         <?php if($data['error'] != "") { ?>
         <div class="errortext">
