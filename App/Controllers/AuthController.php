@@ -87,8 +87,8 @@ class AuthController extends AControllerRedirect
 
         $user = User::getAll('username = ?', [$name]);
         $usernew = $user[0];
-        $zobratahodnota = $this->request()->getValue('newpassword');
-        $usernew->setPassword($zobratahodnota);
+        $newpassword = $this->request()->getValue('newpassword');
+        $usernew->setPassword($newpassword);
         $usernew->save();
 
         $this->redirect('home', 'index', ['success' => 'Your password was changed']);

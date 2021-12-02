@@ -1,5 +1,14 @@
 <?php /** @var Array $data */ ?>
 
+<?php if($data['error'] != "") { ?>
+    <div class="errortext">
+        <?= $data['error'] ?>
+    </div>
+<?php } elseif ($data['success'] != "") {?>
+    <div class="successtext">
+        <?= $data['success'] ?>
+    </div>
+<?php } ?>
 <!-- Header with full-height image -->
 <header class="w3-display-container w3-grayscale-min" id="home">
     <div class="w3-container">
