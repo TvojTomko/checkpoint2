@@ -16,7 +16,6 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <nav class="w3-bar w3-white w3-card" id="myNavbar">
-        <!-- Right-sided navbar links -->
         <div class="left">
             <a href="?c=home" class="w3-bar-item mynav home"><i class="fa fa-home mvr"></i>HOME</a>
             <a href="?c=home&a=team" class="w3-bar-item mynav"><i class="fa fa-user mvr"></i>TEAM</a>
@@ -33,11 +32,12 @@
                         <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fas fa-user-lock mvr"></i>LOGOUT</a>
                     </div>
                 </div>
-                <?php } ?>
+            <?php } ?>
         </div>
         <div class="right">
-        <a href="?c=home" class="w3-bar-item w3-button w3-wide right logo">LOGO will be here</a>
+            <a href="?c=home" class="w3-bar-item w3-button w3-wide right logo">LOGO will be here</a>
         </div>
+
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a href="javascript:void(0)" class="w3-bar-item w3-button right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
