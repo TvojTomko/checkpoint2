@@ -16,7 +16,7 @@
                     <span class="w3-opacity">per month</span>
                 </li>
                 <li class="w3-light-grey w3-padding-24">
-                    <button class="signupbtn">Sign Up</button>
+                    <a href="?c=auth&a=loginpage" type="button" class="signupbtn decnone">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -31,7 +31,7 @@
                     <span class="w3-opacity">per month</span>
                 </li>
                 <li class="w3-light-grey w3-padding-24">
-                    <button class="signupbtn">Sign Up</button>
+                    <a href="?c=auth&a=loginpage" type="button" class="signupbtn decnone">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -46,7 +46,7 @@
                     <span class="w3-opacity">per month</span>
                 </li>
                 <li class="w3-light-grey w3-padding-24">
-                    <button class="signupbtn">Sign Up</button>
+                    <a href="?c=auth&a=loginpage" type="button" class="signupbtn decnone">Sign Up</a>
                 </li>
             </ul>
         </div>
