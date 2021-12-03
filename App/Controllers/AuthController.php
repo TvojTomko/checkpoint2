@@ -34,7 +34,7 @@ class AuthController extends AControllerRedirect
         $logged = Auth::login($login, $password);
 
         if ($logged) {
-            $this->redirect('home');
+            $this->redirect('home', 'index', ['success' => 'Logged in successful']);
         } else {
             $this->redirect('auth', 'loginpage', ['error'=> 'Wrong login name or password']);
         }

@@ -2,21 +2,19 @@
 
 <!--
     TO DO:
-        -opravit css chybu s account menum, pripadne vymysliet nieco krajsie
+        -vymysliet krajsie account menu
         -nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
         -nadizajnovat chybove hlasky
-        -login hlaska
         -opravit chybove vypisy
         -otestovat chyby
         -vymysliet javascript
  -->
-<div>
+
 <?php if ($data['success'] != "") {?>
     <div class="successtext">
         <?= $data['success'] ?>
     </div>
 <?php } ?>
-</div>
 
 <!-- Header with full-height image -->
 <div class="w3-display-container w3-grayscale-min" id="home">

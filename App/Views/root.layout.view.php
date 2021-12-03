@@ -23,10 +23,10 @@
             <a href="?c=home&a=contact" class="w3-bar-item mynav"><i class="fa fa-envelope"></i>CONTACT</a>
             <?php if(!\App\Auth::isLogged()) { ?>
                 <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
-            <?php } else {?>
+            <?php } else { ?>
             <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGOUT</a>
-            <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fa fa-key">CHANGE PASSWORD</i></a>
-            <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fa fa-key">DELETE USER</i></a>
+            <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>CHANGE PASSWORD</a>
+            <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>DELETE USER</a>
             <?php } ?>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
