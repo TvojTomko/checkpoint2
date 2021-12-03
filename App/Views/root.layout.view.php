@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="public/css.css">
 
+<script src="https://kit.fontawesome.com/2f99e28f87.js" crossorigin="anonymous"></script>
+
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -24,9 +26,9 @@
             <?php if(!\App\Auth::isLogged()) { ?>
                 <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
             <?php } else { ?>
-            <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGOUT</a>
-            <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>CHANGE PASSWORD</a>
-            <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>DELETE USER</a>
+                <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fas fa-user-lock mvr"></i>LOGOUT</a>
+                <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fas fa-edit mvr"></i>CHANGE PASSWORD</a>
+                <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fas fa-user-minus mvr"></i>DELETE USER</a>
             <?php } ?>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
