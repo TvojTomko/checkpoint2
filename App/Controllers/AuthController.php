@@ -86,12 +86,21 @@ class AuthController extends AControllerRedirect
         $name = $_SESSION["name"];
 
         $user = User::getAll('username = ?', [$name]);
+        //$oldpassword = User::getAll('password = ?', 'user = $name');
         $usernew = $user[0];
         $newpassword = $this->request()->getValue('newpassword');
-        $usernew->setPassword($newpassword);
-        $usernew->save();
+        $repeatpassword = $this->request()->getValue('repeatpassword');
+        //if ($newpassword != $oldpassword )
+        if ($newpassword == $repeatpassword)
+        {
+            $usernew->setPassword($newpassword);
+            $usernew->save();
 
-        $this->redirect('home', 'index', ['success' => 'Your password was changed']);
+            $this->redirect('home', 'index', ['success' => 'Your password was changed']);
+        } else {
+            $this->redirect('home', 'index', ['error' => 'Your new passwords doesnt match']);
+        }
+
     }
 
     public function deleteuserpage()

@@ -6,6 +6,7 @@
     <div style="margin-top:48px">
         <form method="post" action="?c=auth&a=changepassword">
             <p><input class="w3-input w3-border" type="password" placeholder="New password" name="newpassword" required></p>
+            <p><input class="w3-input w3-border" type="password" placeholder="Repeat new password" name="repeatpassword" required></p>
             <p>
                 <button class="w3-button w3-black" type="submit">
                     <a class="fa fa-paper-plane"></a>

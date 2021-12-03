@@ -1,5 +1,14 @@
 <?php /** @var Array $data */ ?>
 
+<!--
+    TO DO:
+        opravit css chybu s account menum, pripadne vymysliet nieco krajsie
+        nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
+        ? confirm password input ?
+        nadizajnovat chybove hlasky
+        otestovat chyby
+ -->
+
 <?php if($data['error'] != "") { ?>
     <div class="errortext">
         <?= $data['error'] ?>
@@ -9,6 +18,7 @@
         <?= $data['success'] ?>
     </div>
 <?php } ?>
+
 <!-- Header with full-height image -->
 <header class="w3-display-container w3-grayscale-min" id="home">
     <div class="w3-container">
