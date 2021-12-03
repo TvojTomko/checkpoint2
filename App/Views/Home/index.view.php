@@ -2,25 +2,24 @@
 
 <!--
     TO DO:
-        opravit css chybu s account menum, pripadne vymysliet nieco krajsie
-        nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
-        ? confirm password input ?
-        nadizajnovat chybove hlasky
-        otestovat chyby
+        -opravit css chybu s account menum, pripadne vymysliet nieco krajsie
+        -nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
+        -nadizajnovat chybove hlasky
+        -login hlaska
+        -opravit chybove vypisy
+        -otestovat chyby
+        -vymysliet javascript
  -->
-
-<?php if($data['error'] != "") { ?>
-    <div class="errortext">
-        <?= $data['error'] ?>
-    </div>
-<?php } elseif ($data['success'] != "") {?>
+<div>
+<?php if ($data['success'] != "") {?>
     <div class="successtext">
         <?= $data['success'] ?>
     </div>
 <?php } ?>
+</div>
 
 <!-- Header with full-height image -->
-<header class="w3-display-container w3-grayscale-min" id="home">
+<div class="w3-display-container w3-grayscale-min" id="home">
     <div class="w3-container">
         <img src="public/images/gym.jpg" alt="" class="headerpicture">
         <button class="centerbtn">Begin your journey!</button>
@@ -33,7 +32,7 @@
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-</header>
+</div>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:50px 16px" id="about">

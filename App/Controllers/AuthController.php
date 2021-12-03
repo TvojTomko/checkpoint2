@@ -77,7 +77,9 @@ class AuthController extends AControllerRedirect
     public function changepasswordpage()
     {
         return $this->html(
-            []
+            [
+                'error' => $this->request()->getValue('error')
+            ]
         );
     }
 
@@ -98,7 +100,7 @@ class AuthController extends AControllerRedirect
 
             $this->redirect('home', 'index', ['success' => 'Your password was changed']);
         } else {
-            $this->redirect('home', 'index', ['error' => 'Your new passwords doesnt match']);
+            $this->redirect('auth', 'changepasswordpage', ['error' => 'Your new passwords doesnt match']);
         }
 
     }

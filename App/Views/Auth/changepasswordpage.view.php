@@ -1,5 +1,11 @@
 <?php /** @var Array $data */ ?>
 
+<?php if ($data['error'] != "") { ?>
+    <div class="errortext">
+        <?= $data['error'] ?>
+    </div>
+<?php } ?>
+
 <!-- LOGIN section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
     <h2 class="centertext">Change password</h2>

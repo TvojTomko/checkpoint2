@@ -6,9 +6,9 @@
     <div style="margin-top:48px">
 
         <?php if($data['error'] != "") { ?>
-        <div class="errortext">
-            <?= $data['error'] ?>
-        </div>
+            <div class="errortext">
+                <?= $data['error'] ?>
+            </div>
         <?php } ?>
 
         <form method="post" action="?c=auth&a=login">
