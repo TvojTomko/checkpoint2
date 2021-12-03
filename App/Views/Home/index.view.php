@@ -3,7 +3,6 @@
 <!--
     TO DO:
         -responzivne menu
-        -rozbita pricing stranka -> potrebna oprava
         -nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
         -nadizajnovat chybove hlasky
         -opravit chybove vypisy
@@ -21,7 +20,7 @@
 <div class="w3-display-container w3-grayscale-min" id="home">
     <div class="w3-container">
         <img src="public/images/gym.jpg" alt="" class="headerpicture">
-        <a href="?c=auth&a=registerpage" type="button" class="centerbtn">Begin your journey!</a>
+        <a href="?c=auth&a=registerpage" type="button" class="centerbtn decnone">Begin your journey!</a>
     </div>
     <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>

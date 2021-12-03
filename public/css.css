@@ -155,30 +155,18 @@ body, html {
     margin-right: 5px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #d70000;
-}
-
-li {
-    float: right;
-}
-
-li a, .dropbtn {
+.dropbtn {
     display: inline-block;
     color: black;
     text-align: center;
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
     color: white;
 }
 
-li.dropdown {
+dropdown {
     display: inline-block;
 }
 
