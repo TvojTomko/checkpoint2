@@ -16,20 +16,27 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <nav class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="?c=home" class="w3-bar-item w3-button w3-wide left">LOGO will be here</a>
         <!-- Right-sided navbar links -->
-        <div class="right w3-hide-small">
-            <a href="?c=home" class="w3-bar-item mynav"><i class="fa fa-home"></i>HOME</a>
-            <a href="?c=home&a=team" class="w3-bar-item mynav"><i class="fa fa-user"></i>TEAM</a>
-            <a href="?c=home&a=pricing" class="w3-bar-item mynav"><i class="fa fa-usd"></i>PRICING</a>
-            <a href="?c=home&a=contact" class="w3-bar-item mynav"><i class="fa fa-envelope"></i>CONTACT</a>
+        <div class="left">
+            <a href="?c=home" class="w3-bar-item mynav home"><i class="fa fa-home mvr"></i>HOME</a>
+            <a href="?c=home&a=team" class="w3-bar-item mynav"><i class="fa fa-user mvr"></i>TEAM</a>
+            <a href="?c=home&a=pricing" class="w3-bar-item mynav"><i class="fa fa-usd mvr"></i>PRICING</a>
+            <a href="?c=home&a=contact" class="w3-bar-item mynav"><i class="fa fa-envelope mvr"></i>CONTACT</a>
             <?php if(!\App\Auth::isLogged()) { ?>
-                <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key"></i>LOGIN</a>
+                <a href="?c=auth&a=loginpage" class="w3-bar-item mynav"><i class="fa fa-key mvr"></i>LOGIN</a>
             <?php } else { ?>
-                <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fas fa-user-lock mvr"></i>LOGOUT</a>
-                <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fas fa-edit mvr"></i>CHANGE PASSWORD</a>
-                <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fas fa-user-minus mvr"></i>DELETE USER</a>
-            <?php } ?>
+                <div class="right w3-hide-small dropdown mynav">
+                    <a onclick="myFunction()" class="dropbtn mynav acc"><i class="fas fa-user-cog mvr"></i>ACCOUNT</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="?c=auth&a=changepasswordpage" class="w3-bar-item mynav"><i class="fas fa-edit mvr"></i>CHANGE PASSWORD</a>
+                        <a href="?c=auth&a=deleteuserpage" class="w3-bar-item mynav"><i class="fas fa-user-minus mvr"></i>DELETE USER</a>
+                        <a href="?c=auth&a=logout" class="w3-bar-item mynav"><i class="fas fa-user-lock mvr"></i>LOGOUT</a>
+                    </div>
+                </div>
+                <?php } ?>
+        </div>
+        <div class="right">
+        <a href="?c=home" class="w3-bar-item w3-button w3-wide right logo">LOGO will be here</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         <a href="javascript:void(0)" class="w3-bar-item w3-button right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -70,6 +77,28 @@
         <h4 class="centertext credits">Created by Tomas Sobek</h4>
     </div>
 </footer>
+
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 
 <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon

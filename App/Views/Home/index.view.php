@@ -3,6 +3,7 @@
 <!--
     TO DO:
         -vymysliet krajsie account menu
+        -responzivne menu
         -nakodit kontrolu zmeny hesla, aby sa nedalo zadat znovu to iste heslo
         -nadizajnovat chybove hlasky
         -opravit chybove vypisy

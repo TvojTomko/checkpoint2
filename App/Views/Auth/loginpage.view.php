@@ -23,10 +23,10 @@
         </form>
     </div>
 </div>
-<!-- TO DO: predizajnovat register div ? -->
+
 <div  class="w3-container w3-light-grey regdiv" id="register">
         <a href="?c=auth&a=registerpage" class="w3-button w3-black right text bottom regbut" type="button">
-            <p class="fa fa-paper-plane"></p>
+            <i class="fas fa-user-plus"></i>
             Register
         </a>
     <a class="right specialtext bottom">You dont have account yet?</a>
