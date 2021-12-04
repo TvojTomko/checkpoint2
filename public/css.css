@@ -208,3 +208,11 @@ dropdown {
 .logo {
     margin-right: 20px;
 }
+
+.delbtn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    top: 27%;
+    left: 50%;
+}
